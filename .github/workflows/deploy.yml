@@ -1,0 +1,9 @@
+name: deploy to lambda
+on: push
+jobs:
+  deploy-lambda:
+    name: Deploy Lambda
+    runs-on: ubuntu-latest
+    steps:
+      - name: zip
+  
