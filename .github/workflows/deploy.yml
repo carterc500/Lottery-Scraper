@@ -13,6 +13,7 @@ jobs:
           sparse-checkout: |
             lambda_function.py
             requirements.txt
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
