@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import boto3
 
+# Testing change
+
 def lambda_handler(event, context):
     client = boto3.client('sns')
     response = requests.get("https://abd.iowa.gov/alcohol/snapshot/lottery")
