@@ -22,4 +22,11 @@ jobs:
           pip install -r requirements.txt -t .
       - name: Zip
         run: zip -r deployment.zip .
-  
+      - name: Deploy Changes
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+          aws_region: us-east-1
+          function_name: Lottery-Scraper
+          zip_file: deployment.zip
