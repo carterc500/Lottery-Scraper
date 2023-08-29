@@ -28,5 +28,6 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
           aws_region: us-east-1
+          timeout: 120
           function_name: Lottery-Scraper
           zip_file: deployment.zip
